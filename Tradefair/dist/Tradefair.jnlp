@@ -8,7 +8,11 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+<<<<<<< HEAD
     <jar href="Tradefair.jar" size="2037379" download="eager" />
+=======
+    <jar href="Tradefair.jar" size="2013865" download="eager" />
+>>>>>>> 8ae6b89694252dbd06c3fcf5dadbeea50ac54609
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Tradefair" >
     <param name="requiredFXVersion" value="8.0+"/>
