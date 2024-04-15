@@ -1,50 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Line?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tradefair.user56.User6_goal2_a_BoothassignmentController">
    <children>
-      <AnchorPane id="AnchorPane" layoutY="1.0" prefHeight="400.0" prefWidth="600.0">
+      <AnchorPane id="AnchorPane" layoutX="-1.0" layoutY="6.0" prefHeight="545.0" prefWidth="727.0">
          <children>
-            <AnchorPane layoutY="-1.0" opacity="0.78" prefHeight="112.0" prefWidth="600.0" style="-fx-background-color: black;">
+            <AnchorPane layoutX="51.0" layoutY="45.0" prefHeight="477.0" prefWidth="673.0">
                <children>
-                  <Label layoutX="137.0" layoutY="33.0" prefHeight="23.0" prefWidth="418.0" text="Dhaka International Trade Fair (DITF) - 2024" textFill="WHITE">
+                  <BorderPane fx:id="BorderPane" layoutY="-1.0" prefHeight="448.0" prefWidth="684.0">
+                     <bottom>
+                        <AnchorPane prefHeight="0.0" prefWidth="770.0" BorderPane.alignment="CENTER" />
+                     </bottom>
+                     <left>
+                        <AnchorPane prefHeight="336.0" prefWidth="153.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button layoutX="13.0" layoutY="107.0" mnemonicParsing="false" onAction="#viewreg" prefHeight="56.0" prefWidth="146.0" style="-fx-background-color: teal;" text="View booth registration" textFill="WHITE" />
+                              <Button layoutX="12.0" layoutY="175.0" mnemonicParsing="false" onAction="#viewboothselections" prefHeight="49.0" prefWidth="147.0" style="-fx-background-color: teal;" text="View booth slelctions" textFill="WHITE" />
+                              <Button layoutX="11.0" layoutY="240.0" mnemonicParsing="false" onAction="#staff" prefHeight="49.0" prefWidth="147.0" style="-fx-background-color: teal;" text="View staff assignments" textFill="WHITE" />
+                           </children>
+                        </AnchorPane>
+                     </left>
+                     <top>
+                        <AnchorPane prefHeight="54.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
+                     </top>
+                     <right>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="334.0" prefWidth="490.0" BorderPane.alignment="CENTER_LEFT">
+                           <padding>
+                              <Insets left="2.0" />
+                           </padding>
+                        </AnchorPane>
+                     </right>
+                  </BorderPane>
+                  <Button contentDisplay="RIGHT" layoutX="659.0" layoutY="449.0" mnemonicParsing="false" onAction="#backButtonOnClick" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: teal;" text="Go back" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="-7.0" prefHeight="119.0" prefWidth="811.0" style="-fx-background-color: teal;">
+               <children>
+                  <ImageView fitHeight="74.0" fitWidth="74.0" layoutX="148.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/login%20logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="245.0" layoutY="37.0" prefHeight="23.0" prefWidth="418.0" text="Dhaka International Trade Fair (DITF) - 2024" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="36.0" layoutY="56.0" textFill="WHITE">
-                     <font>
-                        <Font name="Arial Bold" size="25.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="139.0" layoutY="56.0" prefHeight="30.0" prefWidth="375.0" text="Bangabandhu Bangladesh-China Friendship Exhibition Center" textFill="WHITE">
+                  <Label layoutX="296.0" layoutY="62.0" prefHeight="30.0" prefWidth="375.0" text="Bangabandhu Bangladesh-China Friendship Exhibition Center" textFill="WHITE">
                      <font>
                         <Font name="Arial" size="11.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="76.0" fitWidth="68.0" layoutX="47.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../User5%20login/src/image/login%20logo.png" />
-                     </image>
-                  </ImageView>
                </children>
             </AnchorPane>
-            <Button layoutX="486.0" layoutY="345.0" mnemonicParsing="false" onAction="#backbutton" opacity="0.43" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: navy;" text="Back" textFill="WHITE" />
-            <Label layoutX="14.0" layoutY="124.0" opacity="0.35" prefHeight="32.0" prefWidth="319.0" text="Registered booths">
-               <font>
-                  <Font name="System Bold" size="22.0" />
-               </font>
-            </Label>
-            <Line endX="-1.0" layoutX="14.0" layoutY="165.0" startX="559.0" strokeWidth="0.5" />
-            <Button layoutX="15.0" layoutY="185.0" mnemonicParsing="false" onAction="#viewlistb2" prefHeight="32.0" prefWidth="116.0" style="-fx-background-color: teal;" text="View List" textFill="WHITE" />
          </children>
       </AnchorPane>
    </children>

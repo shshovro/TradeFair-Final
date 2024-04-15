@@ -17,13 +17,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import tradefair.ExhibitorInformationController;
+
 
 /**
  * FXML Controller class
  *
  * @author WALTON
  */
-public class User6_goal3_a_EventdashboardController implements Initializable {
+public class User6_goal1Controller implements Initializable {
 
     @FXML
     private BorderPane BorderPane;
@@ -37,7 +39,17 @@ public class User6_goal3_a_EventdashboardController implements Initializable {
     }    
 
     @FXML
-    private void backButtonOnClick(ActionEvent event)throws IOException {
+    private void ViewProductsBtn(ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/tradefair/abid/Exhibitor Information.fxml"));
+        Parent root = loader.load();
+        ExhibitorInformationController controller = loader.getController();
+         // Replace with actual values
+        BorderPane.setCenter(root);
+    }
+
+    @FXML
+    private void backButtonOnClick(ActionEvent event) throws IOException {
             
            Parent scene2Parent = FXMLLoader.load(getClass().getResource("user6dashboard.fxml"));
         Scene scene2 = new Scene(scene2Parent);
@@ -45,26 +57,5 @@ public class User6_goal3_a_EventdashboardController implements Initializable {
         window.setScene(scene2);
         window.show(); 
         } 
-
-    @FXML
-    private void ViewProductsBtn(ActionEvent event) throws IOException {
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("tableview.fxml"));
-        Parent root = loader.load();
-        User6_goal3_a_EventscheduleactionController controller = loader.getController();
-         // Replace with actual values
-        BorderPane.setCenter(root);
-    }
-
-    @FXML
-    private void AddNewProductBtn(ActionEvent event) throws IOException {
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("user6_goal3_a_Eventschedule.fxml"));
-        Parent root = loader.load();
-        User6_goal3_a_EventscheduleController controller = loader.getController();
-         // Replace with actual values
-        BorderPane.setCenter(root); 
-        } 
     
 }
-

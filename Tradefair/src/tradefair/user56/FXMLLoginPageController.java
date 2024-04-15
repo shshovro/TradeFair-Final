@@ -92,7 +92,16 @@ public class FXMLLoginPageController implements Initializable {
                         loginPOC(j2);
                         
                     }
-                    
+                    if(optionChosen.equalsIgnoreCase("Exhibitor")){
+                        Exhibitor j5= new Exhibitor(d.getName(),d.getUsername(),d.getPassword(),d.getUsertype());
+                        loginExhibitor(j5);
+                        
+                    }
+                    if(optionChosen.equalsIgnoreCase("Attendee")){
+                        Attendee j6= new Attendee(d.getName(),d.getUsername(),d.getPassword(),d.getUsertype());
+                        loginAttendee(j6);
+                        
+                    }
                     break;
                 }
 
@@ -194,8 +203,32 @@ public class FXMLLoginPageController implements Initializable {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-    
-   
+    public void loginExhibitor(Exhibitor u)throws Exception {
+
+        Stage stage = (Stage) userid.getScene().getWindow();
+        stage.close();
+        Stage primaryStage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/tradefair/abid/Exhibitor Dashbord.fxml"));
+        Parent root = loader.load();
+        primaryStage.setTitle("Exhibitor");
+        Scene scene = new Scene(root,956,630);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+   public void loginAttendee(Attendee u)throws Exception {
+
+        Stage stage = (Stage) userid.getScene().getWindow();
+        stage.close();
+        Stage primaryStage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/tradefair/abid/Attendee Dashboard.fxml"));
+        Parent root = loader.load();
+        primaryStage.setTitle("Attendee");
+        Scene scene = new Scene(root,956,630);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
         
 
 
