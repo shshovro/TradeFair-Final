@@ -16,12 +16,13 @@
       <Button layoutX="350.0" layoutY="184.0" mnemonicParsing="false" onAction="#stallInformation" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #9FE2BF;" text="Stall Information" />
       <Button layoutX="350.0" layoutY="272.0" mnemonicParsing="false" onAction="#stallService" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #9FE2BF;" text="Stall Service" />
       <Button layoutX="94.0" layoutY="272.0" mnemonicParsing="false" onAction="#exhiComunication" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #9FE2BF;" text="Exhibitor Communication" />
-      <Button layoutX="636.0" layoutY="184.0" mnemonicParsing="false" onAction="#reportAnalysis" prefHeight="46.0" prefWidth="128.0" style="-fx-background-color: #9FE2BF;" text="Report Analysis" />
+      <Button layoutX="598.0" layoutY="184.0" mnemonicParsing="false" onAction="#reportAnalysis" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #9FE2BF;" text="Report Analysis" />
       <Button layoutX="600.0" layoutY="272.0" mnemonicParsing="false" onAction="#brandingInformation" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #9FE2BF;" text="Branding Information" />
-      <Button layoutX="636.0" layoutY="429.0" mnemonicParsing="false" onAction="#back" prefHeight="46.0" prefWidth="128.0" style="-fx-background-color: teal;" text="Back">
+      <Button layoutX="634.0" layoutY="453.0" mnemonicParsing="false" onAction="#logout" prefHeight="46.0" prefWidth="128.0" style="-fx-background-color: teal;" text="Logout">
          <font>
             <Font name="Bell MT Bold" size="22.0" />
          </font>
       </Button>
+      <Button layoutX="94.0" layoutY="354.0" mnemonicParsing="false" onAction="#sponsorInformationOnClick" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #9FE2BF;" text="Sponsor Information" />
    </children>
 </AnchorPane>

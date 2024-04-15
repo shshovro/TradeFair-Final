@@ -37,7 +37,7 @@ public class DashboardController implements Initializable {
     @FXML
     private void eminfo(ActionEvent event)throws IOException {
         
-         Parent scene2Parent = FXMLLoader.load(getClass().getResource("manager/EmployeeInformatio.fxml"));
+         Parent scene2Parent = FXMLLoader.load(getClass().getResource("EmployeeInformatio.fxml"));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene2);
@@ -48,7 +48,7 @@ public class DashboardController implements Initializable {
     @FXML
     private void financial(ActionEvent event)throws IOException{
         
-        Parent scene2Parent = FXMLLoader.load(getClass().getResource("manager/FinancialReport.fxml"));
+        Parent scene2Parent = FXMLLoader.load(getClass().getResource("FinancialReport.fxml"));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene2);
@@ -59,7 +59,7 @@ public class DashboardController implements Initializable {
     @FXML
     private void ticket(ActionEvent event)throws IOException {
         
-        Parent scene2Parent = FXMLLoader.load(getClass().getResource("manager/Ticket.fxml"));
+        Parent scene2Parent = FXMLLoader.load(getClass().getResource("Ticket.fxml"));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene2);
@@ -71,7 +71,7 @@ public class DashboardController implements Initializable {
     @FXML
     private void sponsor(ActionEvent event)throws IOException{
         
-        Parent scene2Parent = FXMLLoader.load(getClass().getResource("manager/SponsorDetails.fxml"));
+        Parent scene2Parent = FXMLLoader.load(getClass().getResource("SponsorDetails.fxml"));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene2);
@@ -80,7 +80,7 @@ public class DashboardController implements Initializable {
 
     @FXML
     private void schedule(ActionEvent event)throws IOException {
-        Parent scene2Parent = FXMLLoader.load(getClass().getResource("manager/Schedule.fxml"));
+        Parent scene2Parent = FXMLLoader.load(getClass().getResource("Schedule.fxml"));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene2);
@@ -90,7 +90,7 @@ public class DashboardController implements Initializable {
     @FXML
     private void entrySchedule(ActionEvent event)throws IOException {
         
-        Parent scene2Parent = FXMLLoader.load(getClass().getResource("manager/EntryShedule.fxml"));
+        Parent scene2Parent = FXMLLoader.load(getClass().getResource("EntryShedule.fxml"));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene2);
@@ -101,7 +101,7 @@ public class DashboardController implements Initializable {
     @FXML
     private void transaction(ActionEvent event)throws IOException {
         
-        Parent scene2Parent = FXMLLoader.load(getClass().getResource("manager/TransactionApproval.fxml"));
+        Parent scene2Parent = FXMLLoader.load(getClass().getResource("TransactionApproval.fxml"));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene2);
@@ -111,7 +111,7 @@ public class DashboardController implements Initializable {
     @FXML
     private void security(ActionEvent event)throws IOException {
         
-        Parent scene2Parent = FXMLLoader.load(getClass().getResource("manager/Security.fxml"));
+        Parent scene2Parent = FXMLLoader.load(getClass().getResource("Security.fxml"));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene2);
@@ -121,20 +121,22 @@ public class DashboardController implements Initializable {
     @FXML
     private void newEmployee(ActionEvent event)throws IOException {
         
-        Parent scene2Parent = FXMLLoader.load(getClass().getResource("manager/HiringEmployee.fxml"));
+        Parent scene2Parent = FXMLLoader.load(getClass().getResource("HiringEmployee.fxml"));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene2);
         window.show();
     }
 
+
     @FXML
-    private void back(ActionEvent event) throws IOException{ 
-        Parent scene2Parent = FXMLLoader.load(getClass().getResource("manager/Dashboard.fxml"));
+    private void logout(ActionEvent event)throws IOException {
+        Parent scene2Parent = FXMLLoader.load(getClass().getResource("/tradefair/user56/FXMLLoginPage.fxml"));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene2);
         window.show();
+        
     }
     
 }

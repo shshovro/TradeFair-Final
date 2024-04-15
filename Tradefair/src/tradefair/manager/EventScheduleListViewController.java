@@ -5,9 +5,7 @@
  */
 package tradefair.manager;
 
-import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.URL;
@@ -24,39 +22,35 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.FileChooser;
-import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
-import model.Sponsor;
+import model.Event;
 
 /**
  * FXML Controller class
  *
  * @author IT
  */
-public class SponsorDetailsController implements Initializable {
+public class EventScheduleListViewController implements Initializable {
 
     @FXML
-    private TableView<Sponsor> sponsorDetailsTableView;
+    private TableView<Event> meetingScheduleTableView;
     @FXML
-    private TableColumn<Sponsor, String> nameCol;
+    private TableColumn<Event, String> eventNameTableColumn;
     @FXML
-    private TableColumn<Sponsor, String> comNameCol;
+    private TableColumn<Event, String> eventTimeTableColumn;
     @FXML
-    private TableColumn<Sponsor, String> contactCol;
-    @FXML
-    private TableColumn<Sponsor, String> remarksCol;
+    private TableColumn<Event, String> roomNoEventColumn;
 
-    private ObservableList<Sponsor> getSponsorDetails() {
-        ObservableList<Sponsor> sponsorList = FXCollections.observableArrayList();
+    private ObservableList<Event> getMeetingSchedule() {
+        ObservableList<Event> eventList = FXCollections.observableArrayList();
         ObjectInputStream ois = null;
         try {
-            Sponsor sponsorObj;
-            ois = new ObjectInputStream(new FileInputStream("Sponsors.bin"));
+            Event eventObj;
+            ois = new ObjectInputStream(new FileInputStream("Events.bin"));
 
             while (true) {
-                sponsorObj = (Sponsor) ois.readObject();
-                sponsorList.add(sponsorObj);
+                eventObj = (Event) ois.readObject();
+                eventList.add(eventObj);
             }
 
         } catch (Exception ex) {
@@ -68,34 +62,37 @@ public class SponsorDetailsController implements Initializable {
 
             }
 
-            return sponsorList;
+            return eventList;
         }
 
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        nameCol.setCellValueFactory(new PropertyValueFactory<Sponsor, String>("name"));
-        comNameCol.setCellValueFactory(new PropertyValueFactory<Sponsor, String>("companyName"));
-        contactCol.setCellValueFactory(new PropertyValueFactory<Sponsor, String>("contact"));
-        remarksCol.setCellValueFactory(new PropertyValueFactory<Sponsor, String>("remarks"));
+        eventNameTableColumn.setCellValueFactory(new PropertyValueFactory<Event, String>("eventName"));
+        eventTimeTableColumn.setCellValueFactory(new PropertyValueFactory<Event, String>("eventDateTime"));
+        roomNoEventColumn.setCellValueFactory(new PropertyValueFactory<Event, String>("eventRoom"));
 
-        sponsorDetailsTableView.setItems(getSponsorDetails());
+        meetingScheduleTableView.setItems(getMeetingSchedule());
     }
 
     @FXML
     private void backOnClick(ActionEvent event) throws IOException {
+        Parent scene2Parent = FXMLLoader.load(getClass().getResource("EntryShedule.fxml"));
+        Scene scene2 = new Scene(scene2Parent);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene2);
+        window.show();
+        
+    }
+
+    @FXML
+    private void dashboardOnClick(ActionEvent event) throws IOException {
         Parent scene2Parent = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene2);
         window.show();
-
-    }
-
-    @FXML
-    private void pdfOnClick(ActionEvent event) {
-        
     }
 
 }

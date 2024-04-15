@@ -57,6 +57,9 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="659.0" layoutY="461.0" mnemonicParsing="false" onAction="#back" prefHeight="26.0" prefWidth="76.0" text="Back" />
+      <Button layoutX="625.0" layoutY="431.0" mnemonicParsing="false" onAction="#logout" prefHeight="34.0" prefWidth="95.0" style="-fx-background-color: Teal;" text="Logout" textFill="#f5f5f5">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font></Button>
    </children>
 </AnchorPane>
