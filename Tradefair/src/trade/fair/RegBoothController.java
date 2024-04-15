@@ -8,6 +8,8 @@ package trade.fair;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -51,15 +53,18 @@ public class RegBoothController implements Initializable {
     @FXML
     private TextField BoothNoTfield;
     
+    ObservableList<String> bthlist = FXCollections.observableArrayList("s","m", "l","xl");
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        boothSizeCombo.getItems().add("s");
+      /* boothSizeCombo.getItems().add("s");
         boothSizeCombo.getItems().add("m");
         boothSizeCombo.getItems().add("l");
         boothSizeCombo.getItems().add("xl");
-        
+        */
         boothList = new ArrayList<boothskeletion>();
+         boothSizeCombo.setItems(bthlist);
     }    
 
     @FXML
