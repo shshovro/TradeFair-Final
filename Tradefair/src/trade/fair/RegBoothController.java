@@ -5,6 +5,9 @@
  */
 package trade.fair;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -21,6 +24,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 /**
@@ -49,7 +53,6 @@ public class RegBoothController implements Initializable {
     /**
      * Initializes the controller class.
      */
-    ArrayList<boothskeletion>boothList;
     @FXML
     private TextField BoothNoTfield;
     
@@ -58,25 +61,34 @@ public class RegBoothController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-      /* boothSizeCombo.getItems().add("s");
-        boothSizeCombo.getItems().add("m");
-        boothSizeCombo.getItems().add("l");
-        boothSizeCombo.getItems().add("xl");
-        */
-        boothList = new ArrayList<boothskeletion>();
+       boothSizeCombo.setItems(bthlist);
+         boothNoTfield.setCellValueFactory (new PropertyValueFactory<boothskeletion,String>("boothNo"));
+        boothLocTfield.setCellValueFactory (new PropertyValueFactory<boothskeletion,String>("boothLocation"));
+        boothSizeCombo.setCellValueFactory (new PropertyValueFactory<boothskeletion,String>("boothSize"));
+          loadstaffFile();
+       
          boothSizeCombo.setItems(bthlist);
     }    
 
     @FXML
     private void boothSubmitB(ActionEvent event) {
         
-        boothList.add(new boothskeletion (
-                Integer.parseInt(boothNoTfield.getText()),
-                boothLocTfield.getText(),
-                boothSizeCombo.getValue()
-            )
-        ) ;
+      
+     
         boothLocTfield.clear();boothNoTfield.clear(); 
+        
+        
+        if(!boothLocTfield.getText().isEmpty() || !boothNoTfield.getText().isEmpty() || !boothSizeCombo.getValue().isEmpty()){
+            boothskeletion newData = new boothskeletion(boothLocTfield.getText(), Integer.parseInt(boothNoTfield.getText()), boothSizeCombo.getValue());
+            boothTableview.getItems().add(newData);
+            boothLocTfield.clear();
+            boothNoTfield.clear();
+            
+        }else{
+            System.out.println("Fields should not be empty.");
+        }
+       
+        
     }
 
     @FXML
@@ -90,8 +102,29 @@ public class RegBoothController implements Initializable {
         window.show();   
     }
 
-    @FXML
-    private void viewBoothList(ActionEvent event) {
-    }
+     @FXML
+    private void loadstaffFile() {
     
+         ObjectInputStream ois=null;
+         try {
+            staff s;
+            ois = new ObjectInputStream(new FileInputStream("staff.bin"));
+            while(true){
+            s = (staff) ois.readObject();
+            staffTableview.getItems().add(s);
+            }
+            
+        } catch (Exception ex) {
+            try {
+                if(ois!=null)
+                    ois.close();
+            } 
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+            ex.printStackTrace();
+        }        
+        
+    }
+
 }

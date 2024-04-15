@@ -34,6 +34,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import tradefair.user56.AppendableObjectOutputStream;
 import tradefair.user56.FXMLSellerAddItemController;
+import tradefair.user56.Person;
 import tradefair.user56.User;
 
 /**
@@ -59,11 +60,10 @@ public class RegStaffController implements Initializable {
     private ComboBox<String> staffPostCombo;
     @FXML
     private Button staffRegSubmitB;
-    
-    ArrayList<staff>staffList;
     @FXML
     private Button viewstaffButton;
-
+    
+   
     /**
      * Initializes the controller class.
      */
@@ -73,76 +73,39 @@ public class RegStaffController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        /*staffPostCombo.getItems().add("Executive");
-        staffPostCombo.getItems().add("Volunteer");
-        staffPostCombo.getItems().add("Guard");
-        staffPostCombo.getItems().add("Media");
-        */
+        
         staffPostCombo.setItems(stlist);
-        
-        staffList = new ArrayList<staff>();
-        
-        staffIdCol.setCellValueFactory (new PropertyValueFactory<staff,String>("staffId"));
+         staffIdCol.setCellValueFactory (new PropertyValueFactory<staff,String>("staffId"));
         staffnameCol.setCellValueFactory (new PropertyValueFactory<staff,String>("staffName"));
         staffPosCol.setCellValueFactory (new PropertyValueFactory<staff,String>("staffPost"));
+          loadstaffFile();
+        
+        
+        
+       
         
     }    
 //String staffName, int staffId
     @FXML
-    private void regstaffsubmit(ActionEvent event) {
+    private void regstaffsubmit(ActionEvent event) throws IOException{
         
-       /*0 staffList.add(new staff (
-                staffNameTfield.getText(),
-                Integer.parseInt(staffIdTfield.getText()),
-                staffPostCombo.getValue()
-            )
-        ) ;*/
+         if(!staffNameTfield.getText().isEmpty() || !staffIdTfield.getText().isEmpty() || !staffPostCombo.getValue().isEmpty()){
+            staff newData = new staff(staffNameTfield.getText(), Integer.parseInt(staffIdTfield.getText()), staffPostCombo.getValue());
+            staffTableview.getItems().add(newData);
+            staffNameTfield.clear();
+            staffIdTfield.clear();
+            
+        }else{
+            System.out.println("Fields should not be empty.");
+        }
        
        
-       File f = null;
-        FileOutputStream fos=null;
-        ObjectOutputStream oos=null;
-        try {
-          
-            f = new File("staff.bin");
-            if(f.exists()) {
-                fos = new FileOutputStream(f,true);
-                oos = new AppendableObjectOutputStream(fos);
-            }
-            else{
-                fos = new FileOutputStream(f);
-                oos = new ObjectOutputStream(fos);
-            }
-              
-            
-            staff i = new  staff(
-                    staffNameTfield.getText(),
-                    Integer.parseInt(staffIdTfield.getText()),
-                    staffPostCombo.getValue());
-            
-
-            
-                
-             oos.writeObject(i);
-             
-            staffNameTfield.clear();staffIdTfield.clear(); 
-           
-            
-            
-        } catch (IOException ex) {
-            Logger.getLogger(FXMLSellerAddItemController.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-          try {
-              if(oos != null) oos.close();
-          } catch (IOException ex) {
-              Logger.getLogger(FXMLSellerAddItemController.class.getName()).log(Level.SEVERE, null, ex);
-          }
-      }
+     
        
        
         
     }
-
+    
     @FXML
     private void RegHomeB(ActionEvent event) throws Exception{
      Parent mainSceneParent;
@@ -153,36 +116,28 @@ public class RegStaffController implements Initializable {
         window.setScene(scene1);
         window.show();   
     }
-
     @FXML
-    private void viewstaffB(ActionEvent event) {
-       /* for (staff s: staffList)
-        {
-        staffTableview.getItems().add(s);
-        }*/
-       
-      /* ObjectInputStream ois=null;
-       try{
-           staff s;
-           ois =new ObjectInputStream(new FileInputStream("staff.bin"));
-           while (true){
-           s = (staff) ois.readObject();
-           String r = s.getStaffName()+
-                   ","+s.getStaffId()+
-                   ","+s.getStaffPost() ;
-           staffTableview.appendText(r);
-       }
-           
-       } catch (Exception ex) {
-            try{
+    private void loadstaffFile() {
+    
+         ObjectInputStream ois=null;
+         try {
+            staff s;
+            ois = new ObjectInputStream(new FileInputStream("staff.bin"));
+            while(true){
+            s = (staff) ois.readObject();
+            staffTableview.getItems().add(s);
+            }
+            
+        } catch (Exception ex) {
+            try {
                 if(ois!=null)
                     ois.close();
-            }
-            catch (IOException e){
+            } 
+            catch (IOException e) {
                 e.printStackTrace();
             }
             ex.printStackTrace();
-       }*/
-     }
-    
+        }        
+        
+    }
 }
