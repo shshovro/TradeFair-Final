@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="592.0" prefWidth="805.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tradefair.manager.EmployeeInformatioController">
+<AnchorPane id="AnchorPane" prefHeight="649.0" prefWidth="805.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tradefair.manager.EmployeeInformatioController">
    <children>
       <Label layoutX="239.0" layoutY="39.0" prefHeight="18.0" prefWidth="327.0" text="Employee Information">
          <font>
@@ -87,5 +87,10 @@
          </font>
       </Label>
       <TextField fx:id="remark" layoutX="511.0" layoutY="253.0" />
+      <Button layoutX="628.0" layoutY="581.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="109.0" style="-fx-background-color: Teal;" text="Back" textFill="#fcf6f6">
+         <font>
+            <Font name="Bell MT Bold" size="20.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
