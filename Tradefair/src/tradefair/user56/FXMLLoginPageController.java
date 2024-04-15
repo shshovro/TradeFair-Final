@@ -37,7 +37,7 @@ public class FXMLLoginPageController implements Initializable {
     @FXML
     private ComboBox<String> userType;
 
-    ObservableList<String> list1 = FXCollections.observableArrayList("Manager","Programme Coordinator", "Finanace Supervisor","Director of Operation", "Registrattion Manager","Security Manager","Exhibitor", "Attendee");
+    ObservableList<String> list1 = FXCollections.observableArrayList("Manager","Programme Coordinator", "Finanace Supervisor","Director of Operation", "Registration Manager","Security Manager","Exhibitor", "Attendee");
     @FXML
     private TextField shownPassword;
     @FXML
@@ -67,6 +67,17 @@ public class FXMLLoginPageController implements Initializable {
                     if(optionChosen.equalsIgnoreCase("Director of Operation")){
                         operation j2= new operation(d.getName(),d.getUsername(),d.getPassword(),d.getUsertype());
                         loginDirectorofOperation(j2);
+                        
+                    }
+                    
+                    if(optionChosen.equalsIgnoreCase("Registration Manager")){
+                        registration j3= new registration(d.getName(),d.getUsername(),d.getPassword(),d.getUsertype());
+                        loginRegistrationManager(j3);
+                        
+                    }
+                     if(optionChosen.equalsIgnoreCase("Security Manager")){
+                        security j4= new security(d.getName(),d.getUsername(),d.getPassword(),d.getUsertype());
+                        loginSecurityManager(j4);
                         
                     }
                     
@@ -126,6 +137,35 @@ public class FXMLLoginPageController implements Initializable {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+    
+      public void loginRegistrationManager(registration u)throws Exception {
+//        System.out.print("Hello");
+        Stage stage = (Stage) userid.getScene().getWindow();
+        stage.close();
+        Stage primaryStage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/trade/fair/RegMgr.fxml"));
+        Parent root = loader.load();
+        primaryStage.setTitle("Registration Manager");
+        Scene scene = new Scene(root,956,630);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+    
+       public void loginSecurityManager(security u)throws Exception {
+//        System.out.print("Hello");
+        Stage stage = (Stage) userid.getScene().getWindow();
+        stage.close();
+        Stage primaryStage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/trade/fair/SecMgr/SecMgr.fxml"));
+        Parent root = loader.load();
+        primaryStage.setTitle("Security Manager");
+        Scene scene = new Scene(root,956,630);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+     
     
     public void loginManager(Manager u)throws Exception {
 

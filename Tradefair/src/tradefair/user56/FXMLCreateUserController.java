@@ -41,7 +41,7 @@ public class FXMLCreateUserController implements Initializable {
     @FXML
     private ComboBox<String> type;
     
-     ObservableList<String> list1 = FXCollections.observableArrayList("Manager","Programme Coordinator", "Finanace Supervisor","Director of Operation", "Exhibitor", "Attendee", "Registrattion Manager","Security Manager");
+     ObservableList<String> list1 = FXCollections.observableArrayList("Manager","Programme Coordinator", "Finanace Supervisor","Director of Operation", "Exhibitor", "Attendee", "Registration Manager","Security Manager");
 
   
     @Override
