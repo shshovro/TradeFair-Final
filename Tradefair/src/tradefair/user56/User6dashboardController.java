@@ -41,12 +41,18 @@ public class User6dashboardController implements Initializable {
     }    
 
     @FXML
-    private void wf1(ActionEvent event) {
+    private void wf1(ActionEvent event)throws Exception{
+        Parent mainSceneParent = FXMLLoader.load(getClass().getResource("User6_goal1.fxml"));
+        Scene scene1 = new Scene(mainSceneParent);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene1);
+        window.show();
     }
-
+    
+    
     @FXML
     private void wf2(ActionEvent event) throws Exception{
-        Parent mainSceneParent = FXMLLoader.load(getClass().getResource("user6_goal7_a_Staffdashboard.fxml"));
+        Parent mainSceneParent = FXMLLoader.load(getClass().getResource("user6_goal2_a_Boothassignment.fxml"));
         Scene scene1 = new Scene(mainSceneParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         
@@ -86,7 +92,13 @@ public class User6dashboardController implements Initializable {
     }
 
     @FXML
-    private void wf6(ActionEvent event) {
+    private void wf6(ActionEvent event) throws Exception{
+        Parent mainSceneParent = FXMLLoader.load(getClass().getResource("user6_goal6_a_Attendeeanalytics.fxml"));
+        Scene scene1 = new Scene(mainSceneParent);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        
+        window.setScene(scene1);
+        window.show();
     }
 
    @FXML

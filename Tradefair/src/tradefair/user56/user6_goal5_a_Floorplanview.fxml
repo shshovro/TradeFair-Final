@@ -8,7 +8,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="363.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tradefair.user56.User6_goal5_a_FloorplanviewController">
    <children>
-      <Label layoutX="30.0" layoutY="23.0" opacity="0.45" text="Floor plans">
+      <Label layoutX="12.0" layoutY="46.0" opacity="0.45" text="Floor plans">
          <font>
             <Font name="Arial Bold" size="22.0" />
          </font>

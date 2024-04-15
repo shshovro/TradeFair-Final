@@ -69,5 +69,10 @@
             <Font name="Bell MT Bold" size="21.0" />
          </font>
       </Button>
+      <Button layoutX="125.0" layoutY="213.0" mnemonicParsing="false" onAction="#viewinfo" prefHeight="40.0" prefWidth="208.0" style="-fx-background-color: #9FE2BF;" text="View Information" textFill="#070707">
+         <font>
+            <Font name="Bell MT Bold" size="21.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

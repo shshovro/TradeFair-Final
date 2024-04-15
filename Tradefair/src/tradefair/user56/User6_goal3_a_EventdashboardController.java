@@ -39,7 +39,7 @@ public class User6_goal3_a_EventdashboardController implements Initializable {
     @FXML
     private void backButtonOnClick(ActionEvent event)throws IOException {
             
-           Parent scene2Parent = FXMLLoader.load(getClass().getResource("User5dashboard.fxml"));
+           Parent scene2Parent = FXMLLoader.load(getClass().getResource("user6dashboard.fxml"));
         Scene scene2 = new Scene(scene2Parent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(scene2);

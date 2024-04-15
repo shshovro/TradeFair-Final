@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="715.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tradefair.FeedbackController">
+   <children>
+      <Label layoutX="51.0" layoutY="39.0" text="Select appropriate feedback form" />
+      <Label layoutX="51.0" layoutY="225.0" prefHeight="17.0" prefWidth="177.0" text="Staff Professionalism" />
+      <Label layoutX="51.0" layoutY="301.0" prefHeight="17.0" prefWidth="177.0" text="Attendee Engagement" />
+      <Label layoutX="51.0" layoutY="98.0" prefHeight="17.0" prefWidth="177.0" text="Event Satisfaction" />
+      <ComboBox fx:id="feedbackform" layoutX="311.0" layoutY="35.0" prefHeight="25.0" prefWidth="177.0" />
+      <ComboBox fx:id="eventsatisfaction" layoutX="311.0" layoutY="94.0" prefHeight="25.0" prefWidth="177.0" />
+      <ComboBox fx:id="boothexperience" layoutX="311.0" layoutY="158.0" prefHeight="25.0" prefWidth="177.0" />
+      <ComboBox fx:id="staffprofessionalism" layoutX="311.0" layoutY="221.0" prefHeight="25.0" prefWidth="177.0" />
+      <ComboBox fx:id="attendeeengagement" layoutX="311.0" layoutY="297.0" prefHeight="25.0" prefWidth="177.0" />
+      <Label layoutX="51.0" layoutY="162.0" prefHeight="17.0" prefWidth="150.0" text="Booth Experience" />
+      <Label layoutX="51.0" layoutY="391.0" prefHeight="17.0" prefWidth="177.0" text="suggestions for improvement" />
+      <TextField fx:id="suggestionforimprovement" layoutX="311.0" layoutY="391.0" prefHeight="84.0" prefWidth="424.0" />
+      <Button layoutX="618.0" layoutY="493.0" mnemonicParsing="false" onAction="#reviewfeedback" prefHeight="25.0" prefWidth="117.0" text="Review Feedback" />
+      <Button layoutX="752.0" layoutY="643.0" mnemonicParsing="false" onAction="#submit" prefHeight="25.0" prefWidth="62.0" text="Submit" />
+      <TableView layoutX="51.0" layoutY="536.0" onSort="#viewfeedback" prefHeight="93.0" prefWidth="761.0">
+        <columns>
+          <TableColumn fx:id="eventsatisfaction" prefWidth="124.5" text="Event Satisfaction" />
+          <TableColumn fx:id="boothexperience" prefWidth="179.5" text="Booth Experience" />
+            <TableColumn fx:id="staffprofessionalism" prefWidth="160.5" text="Staff Professionalism" />
+            <TableColumn fx:id="attendeeengagement" prefWidth="166.0" text="Attendee Engagement" />
+            <TableColumn fx:id="overallrating" prefWidth="130.5" text="Overall Rating" />
+        </columns>
+      </TableView>
+      <Button layoutX="14.0" layoutY="676.0" mnemonicParsing="false" onAction="#backtodashboard" prefHeight="25.0" prefWidth="74.0" text="Go back" />
+   </children>
+</AnchorPane>
