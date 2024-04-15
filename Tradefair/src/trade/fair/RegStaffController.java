@@ -6,8 +6,10 @@
 package trade.fair;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.URL;
 import java.util.ArrayList;
@@ -154,10 +156,33 @@ public class RegStaffController implements Initializable {
 
     @FXML
     private void viewstaffB(ActionEvent event) {
-        for (staff s: staffList)
+       /* for (staff s: staffList)
         {
         staffTableview.getItems().add(s);
-        }
-    }
+        }*/
+       
+      /* ObjectInputStream ois=null;
+       try{
+           staff s;
+           ois =new ObjectInputStream(new FileInputStream("staff.bin"));
+           while (true){
+           s = (staff) ois.readObject();
+           String r = s.getStaffName()+
+                   ","+s.getStaffId()+
+                   ","+s.getStaffPost() ;
+           staffTableview.appendText(r);
+       }
+           
+       } catch (Exception ex) {
+            try{
+                if(ois!=null)
+                    ois.close();
+            }
+            catch (IOException e){
+                e.printStackTrace();
+            }
+            ex.printStackTrace();
+       }*/
+     }
     
 }
