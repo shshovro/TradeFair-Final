@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="493.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tradefair.user56.User5_goal4_a_ChartsController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutY="8.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <PieChart fx:id="PieChart" layoutX="169.0" layoutY="134.0" prefHeight="281.0" prefWidth="409.0" style="-fx-background-color: transparent;" title="Pie Chart" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-2.0" layoutY="-1.0" prefHeight="121.0" prefWidth="729.0" style="-fx-background-color: teal;">
+         <children>
+            <ImageView fitHeight="74.0" fitWidth="74.0" layoutX="87.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/login%20logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="199.0" layoutY="32.0" prefHeight="23.0" prefWidth="418.0" text="Dhaka International Trade Fair (DITF) - 2024" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="250.0" layoutY="55.0" prefHeight="30.0" prefWidth="375.0" text="Bangabandhu Bangladesh-China Friendship Exhibition Center" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="11.0" />
+         </font>
+      </Label>
+      <Button layoutX="628.0" layoutY="442.0" mnemonicParsing="false" onAction="#backButtonOnClick" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: teal;" text="Go back" textFill="WHITE" />
+   </children>
+</AnchorPane>

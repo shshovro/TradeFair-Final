@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="305.0" prefWidth="485.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tradefair.user56.User5_goal7_a_OffersController">
+   <children>
+      <TextField fx:id="nameTextField" layoutX="169.0" layoutY="107.0" onMouseClicked="#nameTextFieldMouseButtonOnClick" />
+      <TextField fx:id="amountTextField" layoutX="169.0" layoutY="208.0" onMouseClicked="#amountTextFieldmouseButtonOnClick" />
+      <Label layoutX="32.0" layoutY="104.0" prefHeight="31.0" prefWidth="110.0" text="Enter offerer:" />
+      <Label layoutX="32.0" layoutY="145.0" prefHeight="17.0" prefWidth="104.0" text="Offers date :" />
+      <Label layoutX="33.0" layoutY="180.0" prefHeight="17.0" prefWidth="118.0" text="Deadline :" />
+      <Label layoutX="32.0" layoutY="212.0" prefHeight="17.0" prefWidth="118.0" text="Offered amount :" />
+      <DatePicker fx:id="delivaryDateDatePicker" layoutX="169.0" layoutY="176.0" />
+      <DatePicker fx:id="OderDateDatePicker" layoutX="169.0" layoutY="141.0" />
+      <Button layoutX="188.0" layoutY="250.0" mnemonicParsing="false" onAction="#svaeInformationButtonOnClick" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: teal;" text="Save Information" textFill="WHITE" />
+      <Button layoutX="188.0" layoutY="286.0" mnemonicParsing="false" onAction="#saveTxtFileButtonOnClick" prefHeight="25.0" prefWidth="129.0" style="-fx-background-color: teal;" text="Save as Text File" textFill="WHITE" />
+   </children>
+</AnchorPane>

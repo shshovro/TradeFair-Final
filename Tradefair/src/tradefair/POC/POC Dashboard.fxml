@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="544.0" prefWidth="834.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tradefair.POC.POCDashboardController">
+   <children>
+      <Label layoutX="177.0" layoutY="25.0" text="Program Coordinator Dashboard ">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Button layoutX="94.0" layoutY="184.0" mnemonicParsing="false" onAction="#exhiInformation" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #9FE2BF;" text="Exhibitor information" />
+      <Button layoutX="350.0" layoutY="184.0" mnemonicParsing="false" onAction="#stallInformation" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #9FE2BF;" text="Stall Information" />
+      <Button layoutX="350.0" layoutY="272.0" mnemonicParsing="false" onAction="#stallService" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #9FE2BF;" text="Stall Service" />
+      <Button layoutX="94.0" layoutY="272.0" mnemonicParsing="false" onAction="#exhiComunication" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #9FE2BF;" text="Exhibitor Communication" />
+      <Button layoutX="636.0" layoutY="184.0" mnemonicParsing="false" onAction="#reportAnalysis" prefHeight="46.0" prefWidth="128.0" style="-fx-background-color: #9FE2BF;" text="Report Analysis" />
+      <Button layoutX="600.0" layoutY="272.0" mnemonicParsing="false" onAction="#brandingInformation" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #9FE2BF;" text="Branding Information" />
+      <Button layoutX="636.0" layoutY="429.0" mnemonicParsing="false" onAction="#back" prefHeight="46.0" prefWidth="128.0" style="-fx-background-color: teal;" text="Back">
+         <font>
+            <Font name="Bell MT Bold" size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

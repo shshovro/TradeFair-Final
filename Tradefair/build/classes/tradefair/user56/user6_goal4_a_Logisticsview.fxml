@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="347.0" prefWidth="574.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tradefair.user56.User6_goal4_a_LogisticsviewController">
+   <children>
+      <TableView fx:id="itemViewer" fixedCellSize="0.0" layoutX="10.0" layoutY="66.0" prefHeight="242.0" prefWidth="547.0">
+         <columns>
+            <TableColumn fx:id="nameViewer" prefWidth="162.0" style="background: teal;" text="Item name" />
+            <TableColumn fx:id="idViewer" prefWidth="67.0" text="Quantity" />
+            <TableColumn fx:id="priceViewer" prefWidth="110.0" text="Price" />
+            <TableColumn fx:id="catagoryViewer" text="Status" />
+            <TableColumn fx:id="catagoryViewer1" prefWidth="127.0" text="Supplier" />
+         </columns>
+      </TableView>
+      <Button layoutX="256.0" layoutY="322.0" mnemonicParsing="false" onAction="#deleteData" opacity="0.68" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,3 @@
+productId=1002<> stockQuantity=34<> name=SAdman<> Description=hello<> supplyerUserName=null<> price=123.0
+productId=1003<> stockQuantity=45<> name=sadman<> Description=sedcascqwc<> supplyerUserName=null<> price=230.0
+productId=1004<> stockQuantity=23<> name=sdsascd<> Description=sdfgw efed<> supplyerUserName=null<> price=230.0

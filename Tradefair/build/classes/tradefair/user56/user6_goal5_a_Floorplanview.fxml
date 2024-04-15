@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="363.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tradefair.user56.User6_goal5_a_FloorplanviewController">
+   <children>
+      <Label layoutX="30.0" layoutY="23.0" opacity="0.45" text="Floor plans">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="itemViewer" fixedCellSize="0.0" layoutX="8.0" layoutY="91.0" prefHeight="242.0" prefWidth="559.0">
+         <columns>
+            <TableColumn fx:id="nameViewer" prefWidth="162.0" style="background: teal;" text="Owner Name" />
+            <TableColumn fx:id="idViewer" prefWidth="105.0" text="Stall no" />
+            <TableColumn fx:id="priceViewer" prefWidth="105.0" text="Contact No" />
+            <TableColumn fx:id="catagoryViewer" prefWidth="85.0" text="Stall type" />
+            <TableColumn fx:id="catagoryViewer1" prefWidth="101.0" text="Location" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tradefair.user56.User6_goal7_a_StafflistviewController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="344.0" prefWidth="600.0">
+         <children>
+            <TableView fx:id="itemViewer" layoutX="27.0" layoutY="80.0" prefHeight="242.0" prefWidth="538.0">
+               <columns>
+                  <TableColumn fx:id="nameViewer" prefWidth="96.0" style="background: teal;" text="Name" />
+                  <TableColumn fx:id="idViewer" prefWidth="105.0" text="Assigned Stall" />
+                  <TableColumn fx:id="priceViewer" prefWidth="117.0" text="Contact No" />
+                  <TableColumn fx:id="catagoryViewer" prefWidth="88.0" text="Role" />
+                  <TableColumn fx:id="catagoryViewer1" prefWidth="135.0" text="Location" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
