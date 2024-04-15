@@ -23,6 +23,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 import javafx.stage.Stage;
+import tradefair.abid.Attendee;
+import tradefair.abid.Exhibitor;
 
 /**
  * FXML Controller class
@@ -209,7 +211,11 @@ public class FXMLLoginPageController implements Initializable {
         stage.close();
         Stage primaryStage = new Stage();
         FXMLLoader loader = new FXMLLoader();
+<<<<<<< HEAD
         loader.setLocation(getClass().getResource("/tradefair/abid/Exhibitor Dashbord.fxml"));
+=======
+        loader.setLocation(getClass().getResource("/tradefair/abid/Exhibitor Dashboard.fxml"));
+>>>>>>> e16d88c4aafde864b1eb7efd37e3e3180fcfc86c
         Parent root = loader.load();
         primaryStage.setTitle("Exhibitor");
         Scene scene = new Scene(root,956,630);

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tradefair.ExhibitorDashbordController">
+   <children>
+      <Button layoutX="90.0" layoutY="107.0" mnemonicParsing="false" onAction="#registerexhibitor" prefHeight="25.0" prefWidth="181.0" text="Registration" />
+      <Button layoutX="90.0" layoutY="161.0" mnemonicParsing="false" onAction="#boothselection" prefHeight="25.0" prefWidth="181.0" text="Booth Selection" />
+      <Button layoutX="328.0" layoutY="218.0" mnemonicParsing="false" onAction="#doccumantationsubmission" prefHeight="25.0" prefWidth="181.0" text="Documentation Submission" />
+      <Button layoutX="90.0" layoutY="218.0" mnemonicParsing="false" onAction="#salesmaninput" prefHeight="25.0" prefWidth="181.0" text="Salesman Input" />
+      <Button layoutX="327.0" layoutY="107.0" mnemonicParsing="false" onAction="#loginexhibitor" prefHeight="25.0" prefWidth="181.0" text="Login" />
+      <Button layoutX="327.0" layoutY="161.0" mnemonicParsing="false" onAction="#paymentprocessing" prefHeight="25.0" prefWidth="181.0" text="Payment Processing" />
+      <Button layoutX="90.0" layoutY="269.0" mnemonicParsing="false" onAction="#feedback" prefHeight="25.0" prefWidth="181.0" text="Feedback" />
+      <Button layoutX="327.0" layoutY="269.0" mnemonicParsing="false" onAction="#helpandsupport" prefHeight="25.0" prefWidth="181.0" text="Help and Support" />
+      <Label layoutX="245.0" layoutY="51.0" prefHeight="25.0" prefWidth="111.0" text="Exhibitor Dashboard" textAlignment="CENTER" />
+      <Button layoutX="532.0" layoutY="14.0" mnemonicParsing="false" mouseTransparent="true" onAction="#backtohome" text="Logout" />
+   </children>
+</AnchorPane>

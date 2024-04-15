@@ -33,7 +33,7 @@
             <Font name="Arial Black" size="15.0" />
          </font>
       </Button>
-      <Button layoutX="713.0" layoutY="562.0" mnemonicParsing="false" onAction="#ok" prefHeight="38.0" prefWidth="142.0" style="-fx-background-color: teal;" text="Back" textFill="#fcfcfc">
+      <Button layoutX="713.0" layoutY="562.0" mnemonicParsing="false" onAction="#back" prefHeight="38.0" prefWidth="142.0" style="-fx-background-color: teal;" text="Back" textFill="#fcfcfc">
          <font>
             <Font name="Bell MT Bold" size="25.0" />
          </font>
