@@ -35,7 +35,7 @@ public class RegMgrController implements Initializable {
     @FXML
     private void CheckIn(ActionEvent event) throws Exception{
      Parent mainSceneParent;
-        mainSceneParent = FXMLLoader.load(getClass().getResource("CheckIn.fxml"));
+        mainSceneParent = FXMLLoader.load(getClass().getResource("/trade/fair/CheckIn.fxml"));
         Scene scene1= new Scene (mainSceneParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         
@@ -48,7 +48,7 @@ public class RegMgrController implements Initializable {
     @FXML
     private void boothReg(ActionEvent event) throws Exception {
         Parent mainSceneParent;
-        mainSceneParent = FXMLLoader.load(getClass().getResource("RegBooth.fxml"));
+        mainSceneParent = FXMLLoader.load(getClass().getResource("/trade/fair/RegBooth.fxml"));
         Scene scene1= new Scene (mainSceneParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         
@@ -61,7 +61,7 @@ public class RegMgrController implements Initializable {
     @FXML
     private void regulation(ActionEvent event) throws Exception {
             Parent mainSceneParent;
-        mainSceneParent = FXMLLoader.load(getClass().getResource("Regulations.fxml"));
+        mainSceneParent = FXMLLoader.load(getClass().getResource("/trade/fair/Regulations.fxml"));
         Scene scene1= new Scene (mainSceneParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         
@@ -72,7 +72,7 @@ public class RegMgrController implements Initializable {
     @FXML
     private void reporting(ActionEvent event) throws Exception {
     Parent mainSceneParent;
-        mainSceneParent = FXMLLoader.load(getClass().getResource("Reporting.fxml"));
+        mainSceneParent = FXMLLoader.load(getClass().getResource("/trade/fair/Reporting.fxml"));
         Scene scene1= new Scene (mainSceneParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         
@@ -83,7 +83,7 @@ public class RegMgrController implements Initializable {
     @FXML
     private void ticketing(ActionEvent event) throws Exception {
     Parent mainSceneParent;
-        mainSceneParent = FXMLLoader.load(getClass().getResource("Ticketing.fxml"));
+        mainSceneParent = FXMLLoader.load(getClass().getResource("/trade/fair/Ticketing.fxml"));
         Scene scene1= new Scene (mainSceneParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         
@@ -94,7 +94,7 @@ public class RegMgrController implements Initializable {
     @FXML
     private void notification(ActionEvent event) throws Exception {
     Parent mainSceneParent;
-        mainSceneParent = FXMLLoader.load(getClass().getResource("Notifications.fxml"));
+        mainSceneParent = FXMLLoader.load(getClass().getResource("/trade/fair/Notifications.fxml"));
         Scene scene1= new Scene (mainSceneParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         
@@ -105,7 +105,7 @@ public class RegMgrController implements Initializable {
     @FXML
     private void userSupport(ActionEvent event) throws Exception {
     Parent mainSceneParent;
-        mainSceneParent = FXMLLoader.load(getClass().getResource("UserSupport.fxml"));
+        mainSceneParent = FXMLLoader.load(getClass().getResource("/trade/fair/UserSupport.fxml"));
         Scene scene1= new Scene (mainSceneParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         
@@ -116,7 +116,7 @@ public class RegMgrController implements Initializable {
     @FXML
     private void staffRegistration(ActionEvent event) throws Exception {
         Parent mainSceneParent;
-        mainSceneParent = FXMLLoader.load(getClass().getResource("RegStaff.fxml"));
+        mainSceneParent = FXMLLoader.load(getClass().getResource("/trade/fair/RegStaff.fxml"));
         Scene scene1= new Scene (mainSceneParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         

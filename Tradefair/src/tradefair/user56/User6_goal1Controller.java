@@ -17,7 +17,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import tradefair.ExhibitorInformationController;
+//import tradefair.ExhibitorInformationController;
 
 
 /**
@@ -43,7 +43,7 @@ public class User6_goal1Controller implements Initializable {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/tradefair/abid/Exhibitor Information.fxml"));
         Parent root = loader.load();
-        ExhibitorInformationController controller = loader.getController();
+       // ExhibitorInformationController controller = loader.getController();
          // Replace with actual values
         BorderPane.setCenter(root);
     }

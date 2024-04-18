@@ -5,17 +5,11 @@
  */
 package trade.fair;
 
-import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -32,10 +26,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import tradefair.user56.AppendableObjectOutputStream;
-import tradefair.user56.FXMLSellerAddItemController;
-import tradefair.user56.Person;
-import tradefair.user56.User;
 
 /**
  * FXML Controller class
@@ -60,8 +50,6 @@ public class RegStaffController implements Initializable {
     private ComboBox<String> staffPostCombo;
     @FXML
     private Button staffRegSubmitB;
-    @FXML
-    private Button viewstaffButton;
     
    
     /**
@@ -116,7 +104,6 @@ public class RegStaffController implements Initializable {
         window.setScene(scene1);
         window.show();   
     }
-    @FXML
     private void loadstaffFile() {
     
          ObjectInputStream ois=null;

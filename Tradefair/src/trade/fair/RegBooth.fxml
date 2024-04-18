@@ -26,12 +26,10 @@
         <columns>
           <TableColumn fx:id="boothNoCol" prefWidth="93.0" text="No." />
           <TableColumn fx:id="boothSizeCol" prefWidth="76.0" text="Size" />
-            <TableColumn fx:id="boothAssignCol" prefWidth="109.0" text="Assignment" />
             <TableColumn fx:id="boothLocCol" prefWidth="351.0" text="Location" />
         </columns>
       </TableView>
       <Button layoutX="362.0" layoutY="153.0" mnemonicParsing="false" onAction="#boothSubmitB" text="Register" />
       <Button layoutX="590.0" layoutY="36.0" mnemonicParsing="false" onAction="#RegHomeB" text="Home" />
-      <Button layoutX="61.0" layoutY="202.0" mnemonicParsing="false" onAction="#viewBoothList" text="View Booth list" />
    </children>
 </AnchorPane>

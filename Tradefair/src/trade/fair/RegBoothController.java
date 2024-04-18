@@ -5,12 +5,16 @@
  */
 package trade.fair;
 
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -26,6 +30,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import tradefair.user56.Stuff;
+import tradefair.user56.User6_goal7_a_StaffaddingController;
 
 /**
  * FXML Controller class
@@ -47,8 +53,6 @@ public class RegBoothController implements Initializable {
     private TableColumn<boothskeletion, String> boothSizeCol;
     @FXML
     private TableColumn<boothskeletion, String> boothLocCol;
-    @FXML
-    private TableColumn<boothskeletion,String> boothAssignCol;
 
     /**
      * Initializes the controller class.
@@ -62,32 +66,78 @@ public class RegBoothController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
        boothSizeCombo.setItems(bthlist);
-         boothNoTfield.setCellValueFactory (new PropertyValueFactory<boothskeletion,String>("boothNo"));
-        boothLocTfield.setCellValueFactory (new PropertyValueFactory<boothskeletion,String>("boothLocation"));
-        boothSizeCombo.setCellValueFactory (new PropertyValueFactory<boothskeletion,String>("boothSize"));
-          loadstaffFile();
-       
-         boothSizeCombo.setItems(bthlist);
+         boothNoCol.setCellValueFactory (new PropertyValueFactory<boothskeletion,String>("boothNo"));
+        boothLocCol.setCellValueFactory (new PropertyValueFactory<boothskeletion,String>("boothLocation"));
+        boothSizeCol.setCellValueFactory (new PropertyValueFactory<boothskeletion,String>("boothSize"));
+          loadboothskeletionFile();
     }    
-
+//int boothNo, String boothLocation, String boothSize
     @FXML
-    private void boothSubmitB(ActionEvent event) {
+    private void boothSubmitB (ActionEvent event) throws IOException {
         
-      
-     
-        boothLocTfield.clear();boothNoTfield.clear(); 
-        
-        
+        /*
         if(!boothLocTfield.getText().isEmpty() || !boothNoTfield.getText().isEmpty() || !boothSizeCombo.getValue().isEmpty()){
-            boothskeletion newData = new boothskeletion(boothLocTfield.getText(), Integer.parseInt(boothNoTfield.getText()), boothSizeCombo.getValue());
+            boothskeletion newData = new boothskeletion(Integer.parseInt(boothNoTfield.getText()),boothLocTfield.getText(),  boothSizeCombo.getValue());
             boothTableview.getItems().add(newData);
-            boothLocTfield.clear();
-            boothNoTfield.clear();
+           // boothNoTfield.clear();
+            //boothLocTfield.clear();
+            
             
         }else{
             System.out.println("Fields should not be empty.");
         }
-       
+       */
+        
+         File f = null;
+        FileOutputStream fos=null;
+        ObjectOutputStream oos=null;
+        try {
+          
+            f = new File("boothskeletion.bin");
+            if(f.exists()) {
+                fos = new FileOutputStream(f,true);
+                oos = new trade.fair.AppendableObjectOutputStream(fos);
+            }
+            else{
+                fos = new FileOutputStream(f);
+                oos = new ObjectOutputStream(fos);
+            }
+            
+
+           
+            
+            
+            boothskeletion b = new boothskeletion(
+                   // itemName.getText(),
+                    //Integer.parseInt(itemId.getText()),
+                    //Integer.parseInt(itemPrice.getText()),
+                    //catagory.getValue(),
+                    //supplire.getValue());
+                    
+             Integer.parseInt(boothNoTfield.getText()),
+                    boothLocTfield.getText(),  
+                    boothSizeCombo.getValue()        
+            );
+//catagory.getValue
+            
+                
+             oos.writeObject(b);
+             
+            boothNoTfield.clear();
+            boothLocTfield.clear();
+            
+            
+            
+            
+        } catch (IOException ex) {
+            Logger.getLogger(RegBoothController.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+          try {
+              if(oos != null) oos.close();
+          } catch (IOException ex) {
+              Logger.getLogger(RegBoothController.class.getName()).log(Level.SEVERE, null, ex);
+          }
+      }
         
     }
 
@@ -102,16 +152,15 @@ public class RegBoothController implements Initializable {
         window.show();   
     }
 
-     @FXML
-    private void loadstaffFile() {
+    private void loadboothskeletionFile() {
     
-         ObjectInputStream ois=null;
+        ObjectInputStream ois=null;
          try {
-            staff s;
-            ois = new ObjectInputStream(new FileInputStream("staff.bin"));
+            boothskeletion b;
+            ois = new ObjectInputStream(new FileInputStream("boothskeletion.bin"));
             while(true){
-            s = (staff) ois.readObject();
-            staffTableview.getItems().add(s);
+            b = (boothskeletion) ois.readObject();
+            boothTableview.getItems().add(b);
             }
             
         } catch (Exception ex) {
@@ -123,8 +172,7 @@ public class RegBoothController implements Initializable {
                 e.printStackTrace();
             }
             ex.printStackTrace();
-        }        
-        
-    }
+        }
 
+}
 }
