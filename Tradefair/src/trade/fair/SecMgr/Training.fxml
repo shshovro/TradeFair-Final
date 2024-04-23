@@ -11,25 +11,28 @@
 
 <AnchorPane id="AnchorPane" prefHeight="646.0" prefWidth="1141.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trade.fair.SecMgr.TrainingController">
    <children>
-      <TableView layoutX="64.0" layoutY="323.0" prefHeight="288.0" prefWidth="1002.0">
+      <TableView fx:id="trainingtable" layoutX="64.0" layoutY="323.0" prefHeight="288.0" prefWidth="1002.0">
         <columns>
-          <TableColumn prefWidth="95.0" text="Trainee Id." />
-          <TableColumn prefWidth="411.0" text="Training description" />
-            <TableColumn prefWidth="97.0" text="Status" />
-            <TableColumn prefWidth="111.0" text="Shift" />
-            <TableColumn prefWidth="287.0" text="Comment" />
+          <TableColumn fx:id="traineeidcol" prefWidth="95.0" text="Trainee Id." />
+          <TableColumn fx:id="trainingdescriptioncol" prefWidth="678.0" text="Training description" />
+            <TableColumn fx:id="statuscol" prefWidth="90.0" text="Status" />
+            <TableColumn fx:id="shiftcol" prefWidth="138.0" text="Shift" />
         </columns>
       </TableView>
-      <TextField layoutX="64.0" layoutY="193.0" />
-      <TextField layoutX="64.0" layoutY="250.0" prefHeight="45.0" prefWidth="525.0" />
-      <ComboBox layoutX="779.0" layoutY="193.0" prefWidth="150.0" />
-      <ComboBox layoutX="779.0" layoutY="134.0" prefWidth="150.0" />
-      <Button layoutX="781.0" layoutY="260.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #0ca4a4;" text="Add" textFill="WHITE" />
+      <TextField fx:id="traineeidTfield" layoutX="228.0" layoutY="193.0" />
+      <TextField fx:id="trainingdescriptionTield" layoutX="228.0" layoutY="250.0" prefHeight="45.0" prefWidth="525.0" />
+      <ComboBox fx:id="shiftcombo" layoutX="779.0" layoutY="193.0" prefWidth="150.0" />
+      <ComboBox fx:id="statuscombo" layoutX="779.0" layoutY="134.0" prefWidth="150.0" />
+      <Button layoutX="781.0" layoutY="260.0" mnemonicParsing="false" onAction="#addtrainingB" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #0ca4a4;" text="Add" textFill="WHITE" />
       <Label layoutX="64.0" layoutY="33.0" text="Training">
          <font>
             <Font name="Verdana" size="40.0" />
          </font>
       </Label>
       <Button layoutX="1028.0" layoutY="46.0" mnemonicParsing="false" onAction="#SecHomeB" text="Home" />
+      <Label layoutX="132.0" layoutY="197.0" text="Trainee Id" />
+      <Label layoutX="106.0" layoutY="264.0" text="Training description" />
+      <Label layoutX="715.0" layoutY="138.0" text="Status" />
+      <Label layoutX="715.0" layoutY="197.0" text="Shift" />
    </children>
 </AnchorPane>

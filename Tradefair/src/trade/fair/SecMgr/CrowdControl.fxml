@@ -14,14 +14,14 @@
             <Font name="Verdana" size="30.0" />
          </font>
       </Label>
-      <ComboBox layoutX="280.0" layoutY="126.0" prefWidth="150.0" />
+      <ComboBox fx:id="routecombo" layoutX="280.0" layoutY="126.0" prefWidth="150.0" />
       <Label layoutX="65.0" layoutY="130.0" text="Emergency route" />
-      <ComboBox layoutX="280.0" layoutY="183.0" prefWidth="150.0" />
-      <ComboBox layoutX="280.0" layoutY="241.0" prefWidth="150.0" />
+      <ComboBox fx:id="zonecombo" layoutX="280.0" layoutY="183.0" prefWidth="150.0" />
+      <ComboBox fx:id="gatecombo" layoutX="280.0" layoutY="241.0" prefWidth="150.0" />
       <Label layoutX="65.0" layoutY="187.0" text="Zone no." />
       <Label layoutX="65.0" layoutY="245.0" text="Gate no." />
-      <TextField layoutX="281.0" layoutY="311.0" />
-      <Button layoutX="378.0" layoutY="405.0" mnemonicParsing="false" text="Add" />
+      <TextField fx:id="noticeTfield" layoutX="281.0" layoutY="311.0" />
+      <Button layoutX="378.0" layoutY="405.0" mnemonicParsing="false" onAction="#addcrowdcontrolB" text="Add" />
       <Label layoutX="74.0" layoutY="315.0" text="Notice" />
       <Button layoutX="990.0" layoutY="65.0" mnemonicParsing="false" onAction="#SecHomeB" text="Home" />
    </children>

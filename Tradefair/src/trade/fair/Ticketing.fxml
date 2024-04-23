@@ -32,11 +32,7 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="323.0" layoutY="142.0" prefHeight="40.0" prefWidth="188.0" style="-fx-border-color: Black; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: white;" text="Label" textAlignment="CENTER">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
       <Button layoutX="615.0" layoutY="36.0" mnemonicParsing="false" onAction="#RegHomeB" text="Home" />
+      <TextField fx:id="ticketpriceTfield" layoutX="324.0" layoutY="149.0" />
    </children>
 </AnchorPane>

@@ -28,17 +28,19 @@ import javafx.stage.Stage;
 public class TicketingController implements Initializable {
 
     @FXML
-    private ComboBox<?> ticketTypeCombo;
+    private ComboBox<String> ticketTypeCombo;
     @FXML
     private TextField ticketSlTfield;
     @FXML
-    private TableView<?> ticketTableView;
+    private TableView<String> ticketTableView;
     @FXML
-    private TableColumn<?, ?> ticketSlCol;
+    private TableColumn<ticket, String> ticketSlCol;
     @FXML
-    private TableColumn<?, ?> ticketTypeCol;
+    private TableColumn<ticket, String> ticketTypeCol;
     @FXML
-    private TableColumn<?, ?> ticketPriceCol;
+    private TableColumn<ticket, String> ticketPriceCol;
+    @FXML
+    private TextField ticketpriceTfield;
 
     /**
      * Initializes the controller class.

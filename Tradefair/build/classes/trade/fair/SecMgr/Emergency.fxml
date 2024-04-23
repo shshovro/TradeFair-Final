@@ -6,19 +6,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="646.0" prefWidth="1141.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trade.fair.SecMgr.EmergencyController">
+<AnchorPane id="AnchorPane" prefHeight="645.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trade.fair.SecMgr.EmergencyController">
    <children>
       <Label layoutX="74.0" layoutY="50.0" text="Emergency">
          <font>
             <Font name="Verdana" size="40.0" />
          </font>
       </Label>
-      <Button layoutX="986.0" layoutY="563.0" mnemonicParsing="false" style="-fx-background-color: red; -fx-border-color: grey; -fx-border-radius: 5; -fx-background-radius: 10; -fx-border-width: 1;" text="Alert" textFill="WHITE">
+      <Button layoutX="570.0" layoutY="377.0" mnemonicParsing="false" onAction="#alertB" style="-fx-background-color: red; -fx-border-color: grey; -fx-border-radius: 5; -fx-background-radius: 10; -fx-border-width: 1;" text="Alert" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <TextField layoutX="150.0" layoutY="140.0" prefHeight="330.0" prefWidth="581.0" />
-      <Button layoutX="1003.0" layoutY="63.0" mnemonicParsing="false" onAction="#SecHomeB" text="Home" />
+      <TextField fx:id="emergencyTarea" layoutX="74.0" layoutY="116.0" prefHeight="233.0" prefWidth="581.0" />
+      <Button layoutX="707.0" layoutY="63.0" mnemonicParsing="false" onAction="#SecHomeB" text="Home" />
    </children>
 </AnchorPane>

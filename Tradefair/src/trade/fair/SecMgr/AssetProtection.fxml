@@ -14,13 +14,13 @@
             <Font name="Verdana" size="40.0" />
          </font>
       </Label>
-      <TableView layoutX="69.0" layoutY="141.0" prefHeight="382.0" prefWidth="948.0">
+      <TableView fx:id="assetTable" layoutX="69.0" layoutY="141.0" prefHeight="382.0" prefWidth="948.0">
         <columns>
-          <TableColumn prefWidth="265.0" text="Items" />
-          <TableColumn prefWidth="112.0" text="No. of Items" />
-            <TableColumn prefWidth="108.0" text="Booth no." />
-            <TableColumn prefWidth="137.0" text="Price" />
-            <TableColumn prefWidth="325.0" text="Description" />
+          <TableColumn fx:id="itemcol" prefWidth="265.0" text="Items" />
+          <TableColumn fx:id="itemnocol" prefWidth="112.0" text="No. of Items" />
+            <TableColumn fx:id="boothnocol" prefWidth="108.0" text="Booth no." />
+            <TableColumn fx:id="pricecol" prefWidth="137.0" text="Price" />
+            <TableColumn fx:id="descriptioncol" prefWidth="325.0" text="Description" />
         </columns>
       </TableView>
       <Button layoutX="1024.0" layoutY="55.0" mnemonicParsing="false" onAction="#SecHomeB" text="Home" />

@@ -75,7 +75,7 @@ public class RegBoothController implements Initializable {
     @FXML
     private void boothSubmitB (ActionEvent event) throws IOException {
         
-        /*
+        
         if(!boothLocTfield.getText().isEmpty() || !boothNoTfield.getText().isEmpty() || !boothSizeCombo.getValue().isEmpty()){
             boothskeletion newData = new boothskeletion(Integer.parseInt(boothNoTfield.getText()),boothLocTfield.getText(),  boothSizeCombo.getValue());
             boothTableview.getItems().add(newData);
@@ -86,7 +86,7 @@ public class RegBoothController implements Initializable {
         }else{
             System.out.println("Fields should not be empty.");
         }
-       */
+       
         
          File f = null;
         FileOutputStream fos=null;
@@ -108,11 +108,7 @@ public class RegBoothController implements Initializable {
             
             
             boothskeletion b = new boothskeletion(
-                   // itemName.getText(),
-                    //Integer.parseInt(itemId.getText()),
-                    //Integer.parseInt(itemPrice.getText()),
-                    //catagory.getValue(),
-                    //supplire.getValue());
+                  
                     
              Integer.parseInt(boothNoTfield.getText()),
                     boothLocTfield.getText(),  

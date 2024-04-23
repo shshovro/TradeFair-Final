@@ -14,6 +14,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -23,6 +27,21 @@ import javafx.stage.Stage;
  */
 public class ReportingController implements Initializable {
 
+    @FXML
+    private TableView<?> reporttable;
+    @FXML
+    private TableColumn<?, ?> buyernamecol;
+    @FXML
+    private TableColumn<?, ?> tickettypecol;
+    @FXML
+    private TableColumn<?, ?> ticektnocol;
+    @FXML
+    private TextField buyernameTfield;
+    @FXML
+    private TextField ticketnoTfield;
+    @FXML
+    private ComboBox<?> tickettypecombo;
+
     /**
      * Initializes the controller class.
      */
@@ -31,9 +50,6 @@ public class ReportingController implements Initializable {
         // TODO
     }    
 
-    @FXML
-    private void genReport(ActionEvent event) {
-    }
 
     @FXML
     private void RegHomeB(ActionEvent event)throws Exception{
@@ -44,6 +60,10 @@ public class ReportingController implements Initializable {
         
         window.setScene(scene1);
         window.show();   
+    }
+
+    @FXML
+    private void addbuyerB(ActionEvent event) {
     }
     
 }

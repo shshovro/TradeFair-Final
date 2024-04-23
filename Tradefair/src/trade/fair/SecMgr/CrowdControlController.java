@@ -14,6 +14,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -22,6 +24,15 @@ import javafx.stage.Stage;
  * @author aftab
  */
 public class CrowdControlController implements Initializable {
+
+    @FXML
+    private ComboBox<?> routecombo;
+    @FXML
+    private ComboBox<?> zonecombo;
+    @FXML
+    private ComboBox<?> gatecombo;
+    @FXML
+    private TextField noticeTfield;
 
     /**
      * Initializes the controller class.
@@ -40,6 +51,10 @@ public class CrowdControlController implements Initializable {
         
         window.setScene(scene1);
         window.show();   
+    }
+
+    @FXML
+    private void addcrowdcontrolB(ActionEvent event) {
     }
     
 }

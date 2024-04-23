@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -22,6 +23,9 @@ import javafx.stage.Stage;
  * @author aftab
  */
 public class UserSupportController implements Initializable {
+
+    @FXML
+    private TextField contactTfield;
 
     /**
      * Initializes the controller class.
@@ -33,6 +37,8 @@ public class UserSupportController implements Initializable {
 
     @FXML
     private void sendMsg(ActionEvent event) {
+        
+        
     }
 
     @FXML

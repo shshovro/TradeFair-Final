@@ -14,9 +14,11 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <TextField layoutX="65.0" layoutY="206.0" prefHeight="96.0" prefWidth="282.0" />
+      <TextField fx:id="contactTfield" layoutX="65.0" layoutY="206.0" prefHeight="96.0" prefWidth="282.0" />
       <Label layoutX="80.0" layoutY="402.0" text="Contact no. :" />
       <Label layoutX="467.0" layoutY="402.0" text="Email:" />
       <Button layoutX="665.0" layoutY="61.0" mnemonicParsing="false" onAction="#RegHomeB" text="Home" />
+      <Label layoutX="171.0" layoutY="402.0" text="01980049900" />
+      <Label layoutX="558.0" layoutY="402.0" text="2022058@iub.edu.bd" />
    </children>
 </AnchorPane>

@@ -16,12 +16,12 @@
       <Label layoutX="114.0" layoutY="178.0" text="event title" />
       <Label layoutX="114.0" layoutY="217.0" text="event description" />
       <Label layoutX="815.0" layoutY="178.0" text="log time" />
-      <TextField layoutX="193.0" layoutY="174.0" prefHeight="25.0" prefWidth="209.0" />
-      <TextField layoutX="877.0" layoutY="174.0" />
-      <TextField layoutX="114.0" layoutY="245.0" prefHeight="318.0" prefWidth="487.0" />
-      <Button layoutX="886.0" layoutY="223.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="132.0" text="Add event" />
+      <TextField fx:id="eventtitle" layoutX="193.0" layoutY="174.0" prefHeight="25.0" prefWidth="209.0" />
+      <TextField fx:id="eventlogtime" layoutX="877.0" layoutY="174.0" />
+      <TextField fx:id="eventdescription" layoutX="114.0" layoutY="245.0" prefHeight="318.0" prefWidth="487.0" />
+      <Button layoutX="886.0" layoutY="223.0" mnemonicParsing="false" onAction="#addeventB" prefHeight="45.0" prefWidth="132.0" text="Add event" />
       <Label layoutX="461.0" layoutY="178.0" text="event tag no." />
-      <TextField layoutX="552.0" layoutY="174.0" />
+      <TextField fx:id="eventtagno" layoutX="552.0" layoutY="174.0" />
       <Button layoutX="1018.0" layoutY="68.0" mnemonicParsing="false" onAction="#SecHomeB" text="Home" />
    </children>
 </AnchorPane>

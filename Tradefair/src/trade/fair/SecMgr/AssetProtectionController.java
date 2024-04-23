@@ -14,6 +14,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
 /**
@@ -22,6 +24,19 @@ import javafx.stage.Stage;
  * @author aftab
  */
 public class AssetProtectionController implements Initializable {
+
+    @FXML
+    private TableView<?> assetTable;
+    @FXML
+    private TableColumn<?, ?> itemcol;
+    @FXML
+    private TableColumn<?, ?> itemnocol;
+    @FXML
+    private TableColumn<?, ?> boothnocol;
+    @FXML
+    private TableColumn<?, ?> pricecol;
+    @FXML
+    private TableColumn<?, ?> descriptioncol;
 
     /**
      * Initializes the controller class.

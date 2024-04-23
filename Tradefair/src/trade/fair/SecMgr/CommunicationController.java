@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -22,6 +23,9 @@ import javafx.stage.Stage;
  * @author aftab
  */
 public class CommunicationController implements Initializable {
+
+    @FXML
+    private TextField commuTfield;
 
     /**
      * Initializes the controller class.
@@ -40,6 +44,10 @@ public class CommunicationController implements Initializable {
         
         window.setScene(scene1);
         window.show();   
+    }
+
+    @FXML
+    private void sendmsgB(ActionEvent event) {
     }
     
 }
